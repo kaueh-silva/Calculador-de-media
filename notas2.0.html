@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+<body id="FUNDO">
+    <div id="virtual">
+        <img src="perla_1.png" alt="" width="100%" height="100%">
+    </div>
+    
+    <div id="caixa">
+        
+     <form action="">.
+        <label for="nota">Digite sua primeira nota</label>
+        <input type="text" name="nota" id="nota">
+         <br>
+        
+        <label for="nota2">Digite sua segunda nota</label>
+        <input type="text" name="nota2" id="nota2">
+         <br>
+        <label for="nota3">Digite sua terceira nota</label>
+        <input type="text" name="nota3" id="nota3" placeholder="">
+         <br>
+         
+        <input  type="button" class="btn" onclick="calcular()" name="btn-calcular" id="btn-calcular" value="Calcular">
+         <br>
+         <br>
+         <br>
+        <label for="media">Essa é sua media  </label>
+        <input type="text" name="media" id="media" disabled="true">
+
+
+     </form>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script>
+     window.alert('Ola, meu nome é Samy, e irei calcular a sua media !!');
+
+     function calcular()
+     {
+         let nota = parseFloat ( document.getElementById('nota').value);
+         let nota2 = parseFloat ( document.getElementById('nota2').value);
+         let nota3 =  parseFloat ( document.getElementById('nota3').value);
+
+         let media =  ( nota+ nota2 + nota3) /3;
+         document.getElementById('media').value = media;
+
+         if(media >=6){
+            alert('Aprovado')
+            document.getElementById("aprovado").src='94c98895308a5306de83f0508ca21209.gif'
+            document.getElementById("aprovado").style.display ="block"
+            document.getElementById("FUNDO").style.background ="black"
+
+         }
+
+         else
+         {
+            alert('Reprovado')
+            document.getElementById("reprovado").src='giphy.gif'
+            document.getElementById("reprovado").style.display ="block"
+            document.getElementById("FUNDO").style.background ="black"
+
+
+         }
+      
+     }
+    </script>
+     
+    <img src="" id="aprovado" alt="" width="100%" height="100%">
+    <img src="" id="reprovado" alt="" width="100%" height="100%">
+    
+    
+</body>
+</html>
